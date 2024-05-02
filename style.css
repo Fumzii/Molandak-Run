@@ -1,0 +1,209 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.about {
+	background-color: white;
+	height: 50vh;
+	width: 50vw;
+}
+
+button {
+	background-color: transparent;
+	font-size: 4vw; /* Adjust font size based on viewport width */
+	-webkit-text-stroke-color: white;
+	color: white;
+	border: none;
+}
+
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/background-purple.jpeg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.smalltext {
+	font-size: 2vw; /* Adjust font size based on viewport width */
+	color: #333;
+}
+
+.navbutton {
+	color: purple;
+	background-color: none;
+}
+
+.navbar {
+	position: fixed;
+	display: flex;
+	z-index: 10;
+	height: 5vh;
+	font-size: 4vw; /* Adjust font size based on viewport width */
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 0.2vw; /* Adjust stroke width based on viewport width */
+	-webkit-text-stroke-color: white;
+	top: 1vw; /* Adjust top position based on viewport width */
+	left: 1vw; /* Adjust left position based on viewport width */
+	margin: 1vw; /* Adjust margin based on viewport width */
+}
+
+.extra {
+	position: fixed;
+	display: flex;
+	direction: row;
+	gap: 2vw; /* Adjust gap based on viewport width */
+	z-index: 10;
+	left: 80vw;
+	width: 10vw;
+}
+
+.purple_square {
+	background-size: 100% 100%;
+	height: 8vh;
+	width: 8vw;
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	border-radius: 50%;
+
+}
+
+.purple_square {
+	background-size: contain;
+	height: 4vw; /* Adjusted height to match width for a circular shape */
+	width: 4vw;
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	border-radius: 50%; /* Make the coin circular */
+	background-repeat: no-repeat;
+}
+
+/* Rest of the styles for different coin styles remain unchanged */
+.purple_square_style1 {
+	background-image: url('images/Monad.png');
+}
+
+.purple_square_style2 {
+	background-image: url('images/balancer.png');
+}
+
+.purple_square_style3 {
+	background-image: url('images/paradigm.png');
+}
+
+
+
+body {
+	overflow: hidden;
+}
+
+.bird {
+	height: 10vh;
+	width: 10vw;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 8vw; /* Adjusted width for the obstacle pillars */
+	background: radial-gradient(purple 50%, violet);
+	border: 5px solid black;
+}
+
+.inv {
+	position: fixed;
+	-webkit-clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+	clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 30%;
+	left: 50%;
+	font-size: 4vw; /* Adjust font size based on viewport width */
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.messageStyle {
+	background: white;
+	padding: 2vw; /* Adjust padding based on viewport width */
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 1vw 2vw; /* Adjust box shadow based on viewport width */
+	border-radius: 2vw; /* Adjust border radius based on viewport width */
+}
+
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 5vh;
+	font-size: 4vw; /* Adjust font size based on viewport width */
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 0.1vw; /* Adjust stroke width based on viewport width */
+	-webkit-text-stroke-color: white;
+	top: 1vw; /* Adjust top position based on viewport width */
+	left: 1vw; /* Adjust left position based on viewport width */
+	margin: 1vw; /* Adjust margin based on viewport width */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.score_val {
+	color: purple;
+	font-weight: bold;
+	font-size: 4vw; /* Adjust font size based on viewport width */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for mobile view */
+    body, html {
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .background {
+        background-size: cover;
+    }
+
+  
+    .bird {
+        width: 30vw; /* Increased width for the game character */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .purple_square {
+		top: 40vh;
+        height: 12vw; /* Adjusted height for the coins */
+        width: 12vw; /* Adjusted width for the coins */
+    }
+	
+		.pipe_sprite {
+			width: 15vw; /* Adjusted width for mobile view */
+		}
+	
+}
+
+	.message {
+		font-size: 6vw; /* Adjusted font size for the message */
+	}
+
+	.score {
+		font-size: 6vw; /* Adjusted font size for the score */
+	}
+
+	.score_val {
+		font-size: 6vw; /* Adjusted font size for the score value */
+	}
+
